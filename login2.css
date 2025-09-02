@@ -1,0 +1,227 @@
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Bold Gradient Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    overflow: hidden;
+}
+
+/* Login Container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Headings and Text */
+h2, p {
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    animation: slideInTop 1s ease-out;
+    color: #6a11cb; /* Vibrant Purple */
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    animation: slideInTop 1.5s ease-out;
+}
+
+/* Input Fields */
+.textbox {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f2f9fc; /* Light Blue */
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.textbox input:focus {
+    border-color: #2575fc; /* Bright Blue on focus */
+    background-color: #ffffff; /* White background when focused */
+    box-shadow: 0 0 15px rgba(37, 117, 252, 0.4);
+}
+
+.textbox .tooltip {
+    display: none;
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.textbox input:focus + .tooltip {
+    display: block;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Remember Me */
+.remember-me {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.remember-me label {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #2575fc; /* Bright Blue */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #6a11cb; /* Vibrant Purple */
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Forgot Password and Sign Up */
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-password a {
+    color: #2575fc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #6a11cb;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.signup-link a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #6a11cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 30px 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .textbox input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .remember-me {
+        font-size: 12px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

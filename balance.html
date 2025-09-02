@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wallet / Balance</title>
+  <link rel="stylesheet" href="balance.css">
+</head>
+<body>
+
+  <!-- Balance Section -->
+  <section class="balance-section">
+    <div class="balance-card">
+      <h2>💰 Wallet Balance</h2>
+      <p>Current Balance: ₹<span id="balance-amount">1000</span></p>
+
+      <h3>Add Money</h3>
+      <input type="number" id="add-amount" placeholder="Enter amount to add">
+      <button id="add-money-btn">Add Money</button>
+
+      <h3>Transaction History</h3>
+      <ul id="transaction-list">
+        <li>Initial Balance: ₹1000</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="balance.js"></script>
+</body>
+</html>

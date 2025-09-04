@@ -513,3 +513,120 @@
       visibility: visible;
     }
   }
+/* Header Responsiveness */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 3vw;
+  background: #fff;
+  gap: 10px;
+}
+header > div, header > a {
+  margin: 5px 10px;
+}
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 1vw;
+  }
+  #flip img {
+    width: 120px;
+  }
+  #dabba {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 8px 2vw;
+  }
+  #dabba, #user, #login, #cicon, #cart, #shopicon, #amountsec {
+    width: 100%;
+    margin: 4px 0;
+  }
+}
+
+/* Product Grid Responsiveness */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.card {
+  width: 250px;
+  min-width: 180px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin: 10px;
+  transition: transform 0.2s;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+  display: block;
+}
+@media (max-width: 900px) {
+  .grid {
+    gap: 16px;
+  }
+  .card {
+    width: 45vw;
+    min-width: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .card {
+    width: 95vw;
+    min-width: 120px;
+    margin: 0 auto 16px auto;
+  }
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Swiper Section Responsiveness */
+.main.swiper.mySwiper {
+  width: 98vw !important;
+  height: 40vh !important;
+  margin: 10px auto;
+  border-radius: 14px;
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .main.swiper.mySwiper {
+    height: 28vh !important;
+  }
+}
+@media (max-width: 600px) {
+  .main.swiper.mySwiper {
+    height: 22vh !important;
+    width: 100vw !important;
+  }
+}
+
+/* General Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Anchor and Boximg Sections */
+@media (max-width: 600px) {
+  #page1, #page3, #page4 {
+    padding: 8px 4px;
+  }
+  .anchor, .boximg {
+    width: 95vw;
+    margin: 4px auto;
+  }
+}
